@@ -7,17 +7,17 @@ A mini-framework for database
 
 # Usage
 
-Start object
+-Start object
 $database = new Database('127.0.0.1', 'root', '', 'coins');
 
-Retrive all data
+-Retrive all data
 $data = $database->retriveData("SELECT * FROM table");
 
-Retrive one row
+-Retrive one row
 $data = $database->retriveRow("SELECT * FROM table WHERE id='1'");
 
-Retrive one value (Just username)
+-Retrive one value (Just username)
 $data = $database->retriveValue("SELECT username FROM table WHERE id='1');
 
-Execute query
+-Execute query <Br />
 $data = $database->execute("DELETE FROM table WHERE id='2'");
