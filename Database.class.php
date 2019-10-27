@@ -42,7 +42,7 @@ class Database {
         $numRows = $result->num_rows;
         if ($numRows > 0) {
             $row = $result->fetch_assoc();
-            return reset($row);
+            return $row[0];
         } else {
             return 'none';
         }
@@ -60,8 +60,8 @@ class Database {
         }
     }
 
-    public function execute($sql) {
-        $result = $this->conn->query($sql);
+    public function runquery($query) {
+        $result = $this->conn->query($query);
     }
 
 }
